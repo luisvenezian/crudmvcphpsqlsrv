@@ -1,0 +1,27 @@
+
+<table class="table table-striped">
+    <thead>
+    <th>Nome</th>
+    <th>Usuário</th>
+    <th>Ativo</td>
+    <th><img src="content\assets\icones\ic_update.png" alt="Ícone de update" width="35" height="35"></th>
+    <th><img src="content\assets\icones\ic_delete.png" alt="Ícone de delete" width="35" height="35"></th>
+    </thead>
+    <tbody>
+    <?php if(count($view_list) > 0):?>
+        <?php foreach ($view_list as $li):?>
+            <tr>
+                <td><?php echo $li->nome;?></td>
+                <td><?php echo $li->usuario;?></td>
+                <td><?php echo ($li->st_ativo == 1) ? "Sim" : "Não";?></td>
+                <td><a href="admin/usuario/formCadastro/<?php echo $li->usuario;?>">Editar</a></td>
+                <td><a href="admin/usuario/formDelCadastro/<?php echo $li->usuario;?>">Excluir</a></td>
+            </tr>
+        <?php endforeach;?>
+    <?php endif;?>
+    </tbody>
+</table>
+
+
+
+<a href="admin/usuario/formCadastro" class="btn btn-sm btn-info">Novo Usuário</a>

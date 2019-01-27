@@ -1,0 +1,25 @@
+body{
+    background: grey;
+}
+.wrapper{
+    display: table;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+form{
+    position: relative;
+    width: 350px;
+    margin: auto;
+    background: whitesmoke;
+    padding: 15px;
+}

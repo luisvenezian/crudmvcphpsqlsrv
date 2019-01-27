@@ -1,0 +1,36 @@
+<div class="wrapper">
+    <div class="middle">
+    <form method="POST" action="admin/usuario/save">  
+
+    <br>
+    <h4> Excluir usuário: </h4>
+
+
+    <div class="form-group">
+        <!--<label>Usuário a ser excluído: <strong><?php #echo $view_dados->usuario;?></strong> </label>-->
+
+        <table class="table table-striped">
+        <thead>
+        <th>Nome</th>
+        <th>Usuário</th>
+        <th>Senha</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><?php echo $view_dados->nome;?></td>
+                <td><?php echo $view_dados->usuario;?></td>
+                <td><?php echo $view_dados->senha;?></td>
+            </tr>
+        </tbody>
+        </table>
+        <input type="hidden" name="nome" class="form-control" value="<?php echo $view_dados->nome;?>" required>
+        <input type="hidden" name="usuario" class="form-control" value="<?php echo $view_dados->usuario;?>" required>
+        <input type="hidden" name="senha" class="form-control" maxlength="32" value="<?php echo $view_dados->senha;?>" required>
+        <input type="hidden" name="st_ativo" class="form-control" value="0" required>
+    </div>
+
+    <p><button type="submit" class="btn btn-sm btn-danger">Confirmar</button></p>
+
+    </form>
+    </div>
+</div>
